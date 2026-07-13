@@ -1,0 +1,91 @@
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "local-biz-ai-assistant"
+version = "0.1.0"
+description = "A mock-first Hinglish and English assistant framework for Indian small businesses."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [
+  { name = "Aarav Kumar Katiyar" },
+  { name = "InceptionAIStudios" },
+]
+keywords = ["small-business", "hinglish", "customer-support", "chatbot", "india"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Communications :: Chat",
+]
+dependencies = [
+  "fastapi>=0.115,<1",
+  "httpx>=0.27,<1",
+  "pydantic>=2.9,<3",
+  "python-dotenv>=1.0,<2",
+  "uvicorn>=0.30,<1",
+]
+
+[project.optional-dependencies]
+dev = [
+  "build>=1.2,<2",
+  "mypy>=1.13,<2",
+  "pip-audit>=2.7,<3",
+  "PyYAML>=6.0,<7",
+  "pytest>=8.3,<9",
+  "pytest-cov>=6,<7",
+  "ruff>=0.8,<1",
+]
+
+[project.scripts]
+local-biz-ai = "local_biz_ai_assistant.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/inceptionaistudios-beep/local-biz-ai-assistant"
+Issues = "https://github.com/inceptionaistudios-beep/local-biz-ai-assistant/issues"
+Source = "https://github.com/inceptionaistudios-beep/local-biz-ai-assistant"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/local_biz_ai_assistant"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"src/local_biz_ai_assistant/data/default_business.json" = "local_biz_ai_assistant/data/default_business.json"
+
+[tool.hatch.build.targets.sdist.force-include]
+"src/local_biz_ai_assistant/data/default_business.json" = "src/local_biz_ai_assistant/data/default_business.json"
+
+[tool.hatch.build]
+include = [
+  "src/local_biz_ai_assistant/**/*.py",
+  "src/local_biz_ai_assistant/data/*.json",
+]
+
+[tool.pytest.ini_options]
+addopts = "-ra --strict-markers --strict-config --cov=local_biz_ai_assistant --cov-report=term-missing"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "S"]
+ignore = ["S101"]
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+packages = ["local_biz_ai_assistant"]
+
+[tool.coverage.run]
+branch = true
+source = ["local_biz_ai_assistant"]
+
+[tool.coverage.report]
+fail_under = 85
+show_missing = true
