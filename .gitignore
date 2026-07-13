@@ -30,5 +30,5 @@ Thumbs.db
 
 # Local data and logs
 *.log
-data/
+/data/
 *.sqlite3

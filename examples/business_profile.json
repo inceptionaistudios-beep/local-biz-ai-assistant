@@ -1,0 +1,27 @@
+{
+  "name": "Example Repair Shop",
+  "description": "Fictional sample data. Replace it with your own business information.",
+  "address": "45 Example Road, Jaipur, Rajasthan",
+  "hours": {
+    "Monday-Saturday": "09:30-19:30",
+    "Sunday": "Closed"
+  },
+  "services": [
+    "mobile phone repair",
+    "screen replacement",
+    "device diagnostics"
+  ],
+  "faqs": [
+    {
+      "question": "How long does a screen replacement take?",
+      "answer": "Most supported screen replacements take two to four hours, subject to part availability."
+    }
+  ],
+  "booking_url": "https://example.invalid/book",
+  "contact": {
+    "phone": "+91-00000-00000",
+    "email": "support@example.invalid",
+    "whatsapp": null
+  },
+  "currency": "INR"
+}

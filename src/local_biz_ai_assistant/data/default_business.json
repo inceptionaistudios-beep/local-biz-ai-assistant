@@ -1,0 +1,33 @@
+{
+  "name": "Demo Kirana Store",
+  "description": "A fictional profile for testing the open-source assistant.",
+  "address": "Example Market, Lucknow, Uttar Pradesh",
+  "hours": {
+    "Monday-Saturday": "09:00-21:00",
+    "Sunday": "10:00-18:00"
+  },
+  "services": [
+    "daily groceries",
+    "local pickup",
+    "neighbourhood delivery"
+  ],
+  "faqs": [
+    {
+      "question": "Do you offer home delivery?",
+      "answer": "Yes, the demo store offers neighbourhood delivery. Please contact the store to confirm your area and charges."
+    },
+    {
+      "question": "What payment methods do you accept?",
+      "answer": "The demo store accepts cash and UPI."
+    }
+  ],
+  "booking_url": null,
+  "contact": {
+    "phone": "+91-00000-00000",
+    "email": "hello@example.invalid",
+    "whatsapp": null
+  },
+  "currency": "INR",
+  "escalation_message_english": "I am not fully sure about that. Please contact the store team for a confirmed answer.",
+  "escalation_message_hinglish": "Mujhe iski pakki jankari nahi hai. Confirm answer ke liye store team se contact karein."
+}

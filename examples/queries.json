@@ -1,0 +1,8 @@
+[
+  {"query": "What are your opening hours?", "expected_intent": "timings"},
+  {"query": "Aapki shop kab khuli hai?", "expected_intent": "timings"},
+  {"query": "Where are you located?", "expected_intent": "location"},
+  {"query": "Aap kya services offer karte hain?", "expected_intent": "services"},
+  {"query": "How can I book an appointment?", "expected_intent": "booking"},
+  {"query": "Can you repair a satellite?", "expected_intent": "escalation"}
+]
