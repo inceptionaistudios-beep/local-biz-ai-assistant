@@ -24,6 +24,7 @@ All notable project changes will be documented here. The format follows Keep a C
 - Reject unsafe remote provider URLs.
 - Keep secrets in environment variables and exclude query text from default logs.
 - Validate request and profile sizes and formats.
+- Require pytest 9.0.3 or newer to avoid CVE-2025-71176 in development and CI.
 
 ## [0.0.0] - 2026-06-29
 
