@@ -1,0 +1,39 @@
+name: Feature request
+description: Propose a focused public open-source improvement.
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What user or maintainer problem should this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Explain the smallest useful implementation.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+  - type: textarea
+    id: privacy
+    attributes:
+      label: Privacy, security, and cost impact
+      description: Mention credentials, external data sharing, storage, consent, and paid services.
+    validations:
+      required: true
+  - type: checkboxes
+    id: truthfulness
+    attributes:
+      label: Scope check
+      options:
+        - label: I understand roadmap items are not implemented features.
+          required: true
+        - label: I have not included credentials or private customer information.
+          required: true
