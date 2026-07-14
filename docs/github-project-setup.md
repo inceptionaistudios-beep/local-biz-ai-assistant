@@ -1,18 +1,27 @@
-# GitHub Project Setup Drafts
+# GitHub Project Setup Record
 
-No settings or issues described here have been published yet.
+Repository metadata, labels, and the genuine issues below were applied on 2026-07-14. Repository security rules were not changed; the remaining main-branch protection work is tracked in [issue #10](https://github.com/inceptionaistudios-beep/local-biz-ai-assistant/issues/10).
 
 ## Repository description
 
-Mock-first Python framework for English/Hinglish small-business customer support, with CLI, FastAPI, tests, and safe extension points.
+Open-source Hinglish and English AI assistant framework for Indian micro and small businesses, featuring local mode, CLI, API, tests, and extensible integration interfaces.
 
 ## Accurate topics
 
-`python`, `open-source`, `small-business`, `hinglish`, `customer-support`, `chatbot`, `india`, `automation`
+`python`, `open-source`, `small-business`, `hinglish`, `customer-support`, `chatbot`, `india`, `automation`, `fastapi`
 
 `whatsapp-integration` is intentionally omitted until a real adapter exists.
 
-## Genuine issue drafts
+## Published genuine issues
+
+- [#2 Expand the reviewed Hinglish intent test dataset](https://github.com/inceptionaistudios-beep/local-biz-ai-assistant/issues/2)
+- [#3 Implement a Meta WhatsApp Cloud API adapter](https://github.com/inceptionaistudios-beep/local-biz-ai-assistant/issues/3)
+- [#4 Add a booking-provider interface](https://github.com/inceptionaistudios-beep/local-biz-ai-assistant/issues/4)
+- [#5 Document authenticated deployment and rate limiting](https://github.com/inceptionaistudios-beep/local-biz-ai-assistant/issues/5)
+- [#6 Design privacy-preserving conversation storage](https://github.com/inceptionaistudios-beep/local-biz-ai-assistant/issues/6)
+- [#10 Protect main with required CI checks](https://github.com/inceptionaistudios-beep/local-biz-ai-assistant/issues/10)
+
+The sections below retain the original implementation scopes for maintainer reference.
 
 ### Expand the reviewed Hinglish intent test dataset
 

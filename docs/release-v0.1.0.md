@@ -31,18 +31,25 @@ The original `generate_business_response()` function remains available through `
 
 ## Release checklist
 
-- [ ] Draft PR approved and merged by Aarav.
-- [ ] CI green on `main` for Python 3.10-3.12.
+- [x] Pull request #1 reviewed and merged by Aarav.
+- [x] CI green on `main` for Python 3.10-3.12.
 - [x] Fresh-wheel installation and local CLI/API smoke tests pass.
 - [x] Full local diff and secret scan reviewed.
 - [x] `CHANGELOG.md` moves release items into the dated `0.1.0` section.
-- [ ] Package version and Git tag both equal `0.1.0` / `v0.1.0`.
-- [ ] Release notes rechecked for truthful feature claims.
-- [ ] Tag created from the intended `main` commit.
+- [x] Package version and Git tag both equal `0.1.0` / `v0.1.0`.
+- [x] Release notes rechecked for truthful feature claims.
+- [x] Tag created from the intended `main` commit (`f8eb821d`).
 - [x] Aarav authorised v0.1.0 publication in the final completion run.
-- [ ] GitHub release and tag are publicly verified after publication.
+- [x] GitHub release and tag are publicly verified after publication.
 
-## Exact post-approval commands
+## Published evidence
+
+- Release: https://github.com/inceptionaistudios-beep/local-biz-ai-assistant/releases/tag/v0.1.0
+- Tag target: `f8eb821dba3a207074257cf0c89fef20f887aeb9`
+- Main CI: https://github.com/inceptionaistudios-beep/local-biz-ai-assistant/actions/runs/29358526682
+- Dependency security: https://github.com/inceptionaistudios-beep/local-biz-ai-assistant/actions/runs/29359072654
+
+## Commands used for the release
 
 Run only after the pull request is reviewed, all required checks pass, and the PR is merged:
 
