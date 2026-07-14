@@ -16,7 +16,7 @@ The repository described a useful vision but did not yet provide a configurable 
 - Preserved `generate_business_response()` through the original `app.py` entry point.
 - Added a no-network local provider and a mock-tested OpenAI-compatible adapter.
 - Added request-size validation, provider URL validation, bounded request IDs, sanitized errors, and metadata-only logs.
-- Added 39 tests covering configuration, English/Hinglish behavior, FAQ routing, escalation, malformed requests, API endpoints, logging, and provider parsing/errors.
+- Added 41 tests covering configuration, English/Hinglish behavior, FAQ routing, escalation, malformed requests, API endpoints, logging, and provider parsing/errors.
 - Added packaging, Ruff, mypy, coverage, pip-audit, GitHub Actions, Dependabot, templates, and open-source documentation.
 
 ## Files added or changed
@@ -31,12 +31,12 @@ The repository described a useful vision but did not yet provide a configurable 
 
 ## Testing performed
 
-- `python -m pytest` — 39 passed; 89.93% coverage.
+- `python -m pytest` — 41 passed; 90.42% coverage.
 - `python -m ruff format --check .` — 17 files already formatted.
 - `python -m ruff check .` — all checks passed.
 - `python -m mypy src` — no issues in 10 source files.
 - `python -m build` — sdist and wheel built successfully.
-- `python -m pip_audit .` — no known vulnerabilities found.
+- `python -m pip_audit --local --vulnerability-service osv --progress-spinner off` — no known vulnerabilities found.
 - YAML parsing — 6 files valid.
 - Markdown link check — 0 missing local links.
 - Fresh wheel installation — packaged profile and CLI worked.
@@ -46,7 +46,7 @@ One upstream Starlette TestClient deprecation warning remains; it does not fail 
 
 ## Security review
 
-- Scanned the working tree and all nine local commits; no secret patterns were found.
+- Scanned the working tree and all 11 local-history commits; no high-confidence secret patterns were found.
 - `.env` and common key files are ignored; `.env.example` contains placeholders only.
 - Local mode performs no external request.
 - Non-local provider URLs require HTTPS except localhost and reject embedded credentials, queries, and fragments.

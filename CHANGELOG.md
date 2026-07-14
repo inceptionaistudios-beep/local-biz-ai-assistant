@@ -4,6 +4,10 @@ All notable project changes will be documented here. The format follows Keep a C
 
 ## [Unreleased]
 
+No changes yet.
+
+## [0.1.0] - 2026-07-14
+
 ### Added
 
 - Installable `src/` Python package.
@@ -18,6 +22,7 @@ All notable project changes will be documented here. The format follows Keep a C
 
 - Replaced placeholder-only response behavior with profile-backed deterministic answers.
 - Preserved the original `app.py` function as a compatibility wrapper.
+- Reject unsupported log levels and blank business-hours schedules during configuration loading.
 
 ### Security
 
@@ -32,4 +37,5 @@ All notable project changes will be documented here. The format follows Keep a C
 
 - Initial README and one-file Python template.
 
-[Unreleased]: https://github.com/inceptionaistudios-beep/local-biz-ai-assistant/compare/main...HEAD
+[Unreleased]: https://github.com/inceptionaistudios-beep/local-biz-ai-assistant/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/inceptionaistudios-beep/local-biz-ai-assistant/releases/tag/v0.1.0

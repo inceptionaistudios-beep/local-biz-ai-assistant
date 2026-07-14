@@ -1,5 +1,8 @@
 # Local Business AI Assistant
 
+[![CI](https://github.com/inceptionaistudios-beep/local-biz-ai-assistant/actions/workflows/ci.yml/badge.svg)](https://github.com/inceptionaistudios-beep/local-biz-ai-assistant/actions/workflows/ci.yml)
+[![Dependency security](https://github.com/inceptionaistudios-beep/local-biz-ai-assistant/actions/workflows/security.yml/badge.svg)](https://github.com/inceptionaistudios-beep/local-biz-ai-assistant/actions/workflows/security.yml)
+
 An open-source, mock-first Python framework for Indian micro and small businesses to answer common customer questions in English and simple Hinglish.
 
 > **Project status: alpha MVP.** Local mode, CLI, HTTP API, configuration validation, tests, and one optional OpenAI-compatible adapter are implemented. WhatsApp, SMS, CRM, booking-provider sync, storage, authentication, and production deployment are not implemented.
@@ -187,7 +190,7 @@ python -m ruff format --check .
 python -m ruff check .
 python -m mypy src
 python -m build
-python -m pip_audit .
+python -m pip_audit --local --vulnerability-service osv --progress-spinner off
 ```
 
 CI runs tests on Python 3.10, 3.11, and 3.12 without private secrets.

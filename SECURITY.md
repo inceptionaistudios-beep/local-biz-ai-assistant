@@ -2,7 +2,7 @@
 
 ## Supported versions
 
-Until the first release is approved and published, only the latest commit on `main` is considered for security fixes. The project is alpha software and is not production-ready.
+Security fixes are maintained for the latest `0.1.x` release and the latest commit on `main`. Earlier template commits are not supported. The project is alpha software and is not production-ready.
 
 ## Report a vulnerability
 
