@@ -1,12 +1,12 @@
-# Proposed v0.1.0 Release
+# v0.1.0 Release Runbook
 
-No release has been published. This document is a maintainer draft for approval.
+This is the maintainer checklist for the authorised v0.1.0 publication run. The release must still be created only from a green, verified `main` commit. Public release notes are maintained in [release-notes-v0.1.0.md](release-notes-v0.1.0.md).
 
-## Draft title
+## Release title
 
 v0.1.0 — Mock-first Local Business Assistant MVP
 
-## Draft release notes
+## Release summary
 
 Local Business AI Assistant v0.1.0 turns the original two-file template into an installable, testable alpha MVP for Indian micro and small businesses.
 
@@ -33,28 +33,30 @@ The original `generate_business_response()` function remains available through `
 
 - [ ] Draft PR approved and merged by Aarav.
 - [ ] CI green on `main` for Python 3.10-3.12.
-- [ ] Fresh clone installation and local smoke test pass.
-- [ ] Full diff and secret scan reviewed.
-- [ ] `CHANGELOG.md` moves Unreleased items into a dated `0.1.0` section.
+- [x] Fresh-wheel installation and local CLI/API smoke tests pass.
+- [x] Full local diff and secret scan reviewed.
+- [x] `CHANGELOG.md` moves release items into the dated `0.1.0` section.
 - [ ] Package version and Git tag both equal `0.1.0` / `v0.1.0`.
 - [ ] Release notes rechecked for truthful feature claims.
 - [ ] Tag created from the intended `main` commit.
-- [ ] GitHub release created only after Aarav's explicit approval.
+- [x] Aarav authorised v0.1.0 publication in the final completion run.
+- [ ] GitHub release and tag are publicly verified after publication.
 
 ## Exact post-approval commands
 
-Run only after the draft PR is reviewed, approved, and merged:
+Run only after the pull request is reviewed, all required checks pass, and the PR is merged:
 
 ```powershell
 git switch main
 git pull --ff-only origin main
-python -m pytest
-python -m ruff format --check .
-python -m ruff check .
-python -m mypy src
-python -m build
+.\.venv\Scripts\python.exe -m pytest
+.\.venv\Scripts\python.exe -m ruff format --check .
+.\.venv\Scripts\python.exe -m ruff check .
+.\.venv\Scripts\python.exe -m mypy src
+.\.venv\Scripts\python.exe -m build
 git tag -a v0.1.0 -m "Release v0.1.0"
 git push origin v0.1.0
+gh release create v0.1.0 --title "v0.1.0 — Mock-first Local Business Assistant MVP" --notes-file docs/release-notes-v0.1.0.md
 ```
 
-Then create a GitHub release from tag `v0.1.0`, paste the reviewed notes above, and publish only with explicit final approval. Do not mark it as production-ready.
+After publication, verify the tag, release page, release notes, target commit, and `main` CI. Do not mark the project as production-ready.

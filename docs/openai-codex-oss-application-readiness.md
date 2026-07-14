@@ -26,7 +26,7 @@ The project is a lightweight, mock-first Python framework for Indian micro and s
 
 ## Tests and CI
 
-The local readiness run on 2026-07-13 uses Python 3.12. Tests cover configuration, missing provider variables, English and Hinglish queries, FAQs, escalation, malformed input, API endpoints, provider response parsing, and safe errors. GitHub Actions definitions cover Python 3.10-3.12, Ruff, mypy, build validation, and dependency auditing without private secrets.
+The local readiness run on 2026-07-14 uses Python 3.12. All 41 tests pass with 90.42% branch coverage and an enforced 85% floor. Tests cover configuration, missing provider variables, English and Hinglish queries, FAQs, escalation, malformed input, API endpoints, provider response parsing, and safe errors. GitHub Actions definitions cover Python 3.10-3.12, Ruff, mypy, build validation, and dependency auditing without private secrets.
 
 CI status must be described as **unconfirmed until the working branch is pushed and its GitHub Actions runs complete**. Local passing results do not equal a remote CI result.
 
@@ -40,7 +40,7 @@ The repository offers a small, inspectable baseline for contributors interested 
 
 ## GitHub metrics snapshot
 
-Public repository page snapshot on 2026-07-13 before this working branch is published:
+Public repository page snapshot on 2026-07-14 before this working branch is published:
 
 - Stars: 0
 - Forks: 0
