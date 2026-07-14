@@ -46,7 +46,7 @@ One upstream Starlette TestClient deprecation warning remains; it does not fail 
 
 ## Security review
 
-- Scanned the working tree and all 11 local-history commits; no high-confidence secret patterns were found.
+- Scanned the working tree and all reachable local commits in the final pre-push review; no high-confidence secret patterns were found.
 - `.env` and common key files are ignored; `.env.example` contains placeholders only.
 - Local mode performs no external request.
 - Non-local provider URLs require HTTPS except localhost and reject embedded credentials, queries, and fragments.
@@ -60,7 +60,7 @@ One upstream Starlette TestClient deprecation warning remains; it does not fail 
 - Hinglish and FAQ matching are lightweight deterministic baselines.
 - WhatsApp, SMS, CRM, and booking-provider synchronization are not implemented.
 - The optional provider adapter is tested with mock HTTP responses, not paid credentials.
-- Remote GitHub Actions status will be known only after this branch is pushed.
+- The first GitHub Actions run passed on Python 3.10, 3.11, and 3.12, including lint, type, package, and OSV dependency-audit checks.
 
 ## Screenshots or command output
 
@@ -74,7 +74,7 @@ No screenshot is required because the MVP is a CLI/API package. The README inclu
 - [x] Documentation separates completed and planned features.
 - [x] No secrets or customer data are included.
 - [x] Package data is present in the built wheel.
-- [ ] GitHub Actions pass on Python 3.10, 3.11, and 3.12.
+- [x] GitHub Actions pass on Python 3.10, 3.11, and 3.12.
 - [ ] Maintainer reviews and approves merge.
 
 ## Post-merge steps
