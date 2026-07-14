@@ -9,6 +9,14 @@ This is a truthful preparation document, not an application submission or eligib
 - Role: Founder, CEO, and Chief Developer of InceptionAIStudios; public repository maintainer
 - License: MIT
 
+## Public evidence snapshot
+
+- Final `main` commit for v0.1.0: `f8eb821dba3a207074257cf0c89fef20f887aeb9`
+- MVP pull request: https://github.com/inceptionaistudios-beep/local-biz-ai-assistant/pull/1
+- Main CI: https://github.com/inceptionaistudios-beep/local-biz-ai-assistant/actions/runs/29358526682
+- Dependency security: https://github.com/inceptionaistudios-beep/local-biz-ai-assistant/actions/runs/29359072654
+- Release: https://github.com/inceptionaistudios-beep/local-biz-ai-assistant/releases/tag/v0.1.0
+
 ## Project purpose
 
 The project is a lightweight, mock-first Python framework for Indian micro and small businesses to answer repeated customer questions in English and simple Hinglish. It is intended as an open-source foundation for future website and messaging-channel adapters without requiring a paid AI API for the base experience.
@@ -26,9 +34,9 @@ The project is a lightweight, mock-first Python framework for Indian micro and s
 
 ## Tests and CI
 
-The local readiness run on 2026-07-14 uses Python 3.12. All 41 tests pass with 90.42% branch coverage and an enforced 85% floor. Tests cover configuration, missing provider variables, English and Hinglish queries, FAQs, escalation, malformed input, API endpoints, provider response parsing, and safe errors. GitHub Actions definitions cover Python 3.10-3.12, Ruff, mypy, build validation, and dependency auditing without private secrets.
+The final local readiness run on 2026-07-14 uses Python 3.12, pytest 9.1.1, pytest-cov 7.1.0, and mypy 2.3.0. All 41 tests pass with 90.42% branch coverage and an enforced 85% floor. Tests cover configuration, missing provider variables, English and Hinglish queries, FAQs, escalation, malformed input, API endpoints, provider response parsing, and safe errors.
 
-CI status must be described as **unconfirmed until the working branch is pushed and its GitHub Actions runs complete**. Local passing results do not equal a remote CI result.
+GitHub Actions passed on `main` for Python 3.10, 3.11, and 3.12. Ruff, strict mypy, package build, and OSV dependency-audit checks also passed without private secrets.
 
 ## Maintenance responsibilities
 
@@ -40,16 +48,19 @@ The repository offers a small, inspectable baseline for contributors interested 
 
 ## GitHub metrics snapshot
 
-Public repository page snapshot on 2026-07-14 before this working branch is published:
+Public repository and API snapshot on 2026-07-14 after v0.1.0 publication:
 
 - Stars: 0
 - Forks: 0
-- Open issues: 0
+- Open issues: 6 genuine roadmap or governance issues
 - Open pull requests: 0
-- Published releases: 0
-- Commits on `main`: 3
+- Published releases: 1 (`v0.1.0`)
+- Commits on `main`: 23
+- Commit contributors returned by GitHub: 1 human maintainer and Dependabot bot
+- External human contributors: 0
+- Release-asset downloads: not applicable because no binary assets were uploaded; GitHub does not expose source-archive download counts
 
-These metrics must be refreshed immediately before any application. No adoption, user, customer, download, or installation count is claimed.
+These metrics must be refreshed immediately before any future application submission. No adoption, user, customer, source-download, or installation count is claimed.
 
 ## Current limitations
 
@@ -58,7 +69,8 @@ These metrics must be refreshed immediately before any application. No adoption,
 - No authentication, rate limiting, storage, multi-tenancy, or production deployment.
 - No implemented WhatsApp, SMS, CRM, or booking-provider adapter.
 - Optional remote adapter tested with mocked HTTP responses, not paid credentials.
-- No confirmed public users, installations, external contributors, or releases.
+- The `main` branch is not yet protected by a required-check ruleset; this is tracked in issue #10.
+- No confirmed public users, installations, source-download count, or external human contributors.
 
 ## Planned maintenance workflow
 
@@ -87,4 +99,4 @@ Credits would support only this public open-source project: opt-in evaluation to
 
 ### 3. Anything else we should know?
 
-The repository is early: it currently has no claimed users, downloads, external contributors, or release. I have kept completed features separate from roadmap items and will refresh metrics before applying. Codex would help a student maintainer review contributions, reproduce issues, improve tests and docs, and maintain security boundaries while the public project grows through genuine work.
+The project is early: v0.1.0 is public, with 0 stars, 0 forks, no claimed users or installations, and no external human contributors. Completed features remain separate from six genuine roadmap/governance issues. Codex would help a student maintainer reproduce issues, review contributions, improve tests and docs, and preserve security boundaries as the project grows through genuine work.

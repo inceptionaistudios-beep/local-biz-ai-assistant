@@ -7,6 +7,8 @@ An open-source, mock-first Python framework for Indian micro and small businesse
 
 > **Project status: alpha MVP.** Local mode, CLI, HTTP API, configuration validation, tests, and one optional OpenAI-compatible adapter are implemented. WhatsApp, SMS, CRM, booking-provider sync, storage, authentication, and production deployment are not implemented.
 
+Current release: [v0.1.0 — Mock-first Local Business Assistant MVP](https://github.com/inceptionaistudios-beep/local-biz-ai-assistant/releases/tag/v0.1.0).
+
 ## Why this exists
 
 Small businesses often need a simple way to answer repeated questions about timings, location, services, booking, prices, and contact details. This project provides a low-cost foundation that works locally without an API key and exposes clean extension points for future messaging channels.
