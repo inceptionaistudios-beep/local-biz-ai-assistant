@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security report
+    url: https://github.com/inceptionaistudios-beep/local-biz-ai-assistant/security
+    about: Review SECURITY.md and use a private reporting path when available.
+  - name: Support guide
+    url: https://github.com/inceptionaistudios-beep/local-biz-ai-assistant/blob/main/SUPPORT.md
+    about: Read the support checklist before opening an issue.
