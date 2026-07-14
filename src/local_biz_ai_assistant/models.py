@@ -62,6 +62,18 @@ class BusinessProfile(BaseModel):
             raise ValueError("must not be blank")
         return cleaned
 
+    @field_validator("hours")
+    @classmethod
+    def clean_hours(cls, value: dict[str, str]) -> dict[str, str]:
+        cleaned: dict[str, str] = {}
+        for day, hours in value.items():
+            clean_day = day.strip()
+            clean_value = hours.strip()
+            if not clean_day or not clean_value:
+                raise ValueError("hours must use non-blank day and schedule values")
+            cleaned[clean_day] = clean_value
+        return cleaned
+
     @field_validator("services")
     @classmethod
     def clean_services(cls, value: list[str]) -> list[str]:

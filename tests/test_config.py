@@ -42,10 +42,32 @@ def test_missing_profile_is_rejected(tmp_path: Path) -> None:
         load_business_profile(tmp_path / "missing.json")
 
 
+def test_blank_business_hours_are_rejected(tmp_path: Path) -> None:
+    profile_path = tmp_path / "blank-hours.json"
+    profile_path.write_text(
+        json.dumps(
+            {
+                "name": "Test Shop",
+                "address": "Test Address",
+                "hours": {"Daily": "   "},
+                "services": ["Repairs"],
+            }
+        ),
+        encoding="utf-8",
+    )
+    with pytest.raises(ConfigurationError, match="hours"):
+        load_business_profile(profile_path)
+
+
 def test_local_settings_need_no_api_key() -> None:
     settings = load_settings({}, load_env_file=False)
     assert settings.provider == "local"
     assert settings.api_key is None
+
+
+def test_invalid_log_level_is_rejected() -> None:
+    with pytest.raises(ConfigurationError, match="LOCAL_BIZ_LOG_LEVEL"):
+        load_settings({"LOCAL_BIZ_LOG_LEVEL": "verbose"}, load_env_file=False)
 
 
 def test_remote_provider_requires_all_variables() -> None:

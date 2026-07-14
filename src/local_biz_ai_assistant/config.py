@@ -14,6 +14,8 @@ from pydantic import ValidationError
 from local_biz_ai_assistant.errors import ConfigurationError
 from local_biz_ai_assistant.models import BusinessProfile
 
+VALID_LOG_LEVELS = {"DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"}
+
 
 @dataclass(frozen=True)
 class Settings:
@@ -41,6 +43,10 @@ def load_settings(
     api_key = env.get("LOCAL_BIZ_API_KEY", "").strip() or None
     base_url = env.get("LOCAL_BIZ_API_BASE_URL", "").strip().rstrip("/") or None
     model = env.get("LOCAL_BIZ_MODEL", "").strip() or None
+    log_level = env.get("LOCAL_BIZ_LOG_LEVEL", "INFO").strip().upper() or "INFO"
+    if log_level not in VALID_LOG_LEVELS:
+        allowed = ", ".join(sorted(VALID_LOG_LEVELS))
+        raise ConfigurationError(f"LOCAL_BIZ_LOG_LEVEL must be one of: {allowed}.")
 
     timeout_text = env.get("LOCAL_BIZ_REQUEST_TIMEOUT", "15").strip()
     try:
@@ -70,7 +76,7 @@ def load_settings(
         api_key=api_key,
         api_base_url=base_url,
         model=model,
-        log_level=env.get("LOCAL_BIZ_LOG_LEVEL", "INFO").strip().upper(),
+        log_level=log_level,
         request_timeout_seconds=timeout,
     )
 

@@ -7,7 +7,7 @@ name = "local-biz-ai-assistant"
 version = "0.1.0"
 description = "A mock-first Hinglish and English assistant framework for Indian small businesses."
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.10,<3.13"
 license = { file = "LICENSE" }
 authors = [
   { name = "Aarav Kumar Katiyar" },
@@ -49,6 +49,8 @@ local-biz-ai = "local_biz_ai_assistant.cli:main"
 Homepage = "https://github.com/inceptionaistudios-beep/local-biz-ai-assistant"
 Issues = "https://github.com/inceptionaistudios-beep/local-biz-ai-assistant/issues"
 Source = "https://github.com/inceptionaistudios-beep/local-biz-ai-assistant"
+Documentation = "https://github.com/inceptionaistudios-beep/local-biz-ai-assistant/tree/main/docs"
+Changelog = "https://github.com/inceptionaistudios-beep/local-biz-ai-assistant/blob/main/CHANGELOG.md"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/local_biz_ai_assistant"]
